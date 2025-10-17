@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TulkiFlow — Websites that Work</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth;}
+    body {background: #f9f9fb; color: #222; overflow-x: hidden;}
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 50px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky; top: 0; z-index: 10;
+    }
+    header img {height: 50px; transition: transform 0.3s ease;}
+    header img:hover {transform: scale(1.05);}
+    nav a {
+      color: #333; text-decoration: none; margin-left: 25px; font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {color: #6a1b9a;}
+
+    .hero {
+      text-align: center; padding: 120px 20px;
+      background: linear-gradient(135deg, #6a1b9a, #0077c2, #43a047, #f08c00);
+      background-size: 400% 400%; animation: gradientMove 10s ease infinite;
+      color: #fff;
+    }
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .hero h2 {font-size: 2.8rem; margin-bottom: 15px; animation: fadeUp 1s ease;}
+    .hero p {max-width: 650px; margin: 0 auto 30px; font-size: 1.1rem; opacity: 0.9; animation: fadeUp 1.5s ease;}
+    .btn-primary {
+      background: #fff; color: #6a1b9a; border: none; padding: 14px 32px;
+      border-radius: 40px; font-weight: 600; cursor: pointer;
+      transition: all 0.3s ease; animation: fadeUp 2s ease;
+    }
+    .btn-primary:hover {background: #6a1b9a; color: #fff; transform: scale(1.05);}
+
+    section {padding: 80px 20px; text-align: center; max-width: 1200px; margin: auto;}
+    h3 {font-size: 2rem; margin-bottom: 20px; color: #6a1b9a;}
+    p {color: #000000; line-height: 1.6;}
+
+    .features {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px;}
+    .card {
+      background: #fff; border-radius: 20px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.1);}
+    .card h4 {color: #f08c00; margin-bottom: 10px;}
+    .card p {color: #444;}
+
+    .pricing-table {
+      width: 100%; border-collapse: collapse; margin-top: 40px; border-radius: 20px; overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .pricing-table th, .pricing-table td {
+      padding: 20px; border-bottom: 1px solid #eee;
+    }
+    .pricing-table th {
+      background: #6a1b9a; color: #fff; font-size: 1.1rem;
+    }
+    .pricing-table td {background: #fff;}
+    .pricing-table tr:hover td {background: #faf6ff;}
+
+    footer {
+      text-align: center; padding: 40px 20px; background: #fff;
+      border-top: 1px solid #eee; color: #777; font-size: 0.95rem;
+    }
+    footer a {color: #6a1b9a; text-decoration: none; margin: 0 10px;}
+    footer a:hover {text-decoration: underline;}
+
+    /* Fade-up animation */
+    @keyframes fadeUp {
+      0% {opacity: 0; transform: translateY(40px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {flex-direction: column; padding: 15px;}
+      nav a {margin: 10px;}
+      .hero h2 {font-size: 2rem;}
+      .hero p {font-size: 1rem;}
+      .btn-primary {padding: 12px 24px;}
+    }
+  </style>
+  <script>
+    function openModal() {
+      document.getElementById('demoModal').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('demoModal').style.display = 'none';
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <img src="tkflow.jpg" alt="TulkiFlow Logo" />
+    <nav>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Smart Websites for Smart Businesses</h2>
+    <p>We create fast, modern and adaptive websites that reflect your brand and convert visitors into clients. Built with passion by TulkiFlow.</p>
+    <button class="btn-primary" onclick="openModal()">Get a Free Consultation</button>
+  </section>
+
+  <section id="about">
+    <h3>About TulkiFlow</h3>
+    <p>TulkiFlow builds modern web solutions for small businesses and startups. Our mission is to help you launch your online presence quickly, beautifully and effectively — at an affordable price.</p>
+  </section>
+
+  <section id="features">
+    <h3>Our Advantages</h3>
+    <div class="features">
+      <div class="card"><h4>⚡ Fast Development</h4><p>We build and launch your site within days — not weeks.</p></div>
+      <div class="card"><h4>📱 Fully Responsive</h4><p>Your website will look perfect on any device — desktop, tablet or smartphone.</p></div>
+      <div class="card"><h4>🎨 Custom Design</h4><p>Each project reflects your unique brand identity and goals.</p></div>
+      <div class="card"><h4>🚀 SEO Optimization</h4><p>We ensure your website performs fast and ranks higher on Google.</p></div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h3>Pricing</h3>
+    <table class="pricing-table">
+      <tr><th>Plan</th><th>Description</th><th>Price</th></tr>
+      <tr><td>Landing Page</td><td>Single-page site for promoting your business or service</td><td><strong>₸9,990</strong></td></tr>
+      <tr><td>Advanced Website</td><td>Multi-page website with enhanced functionality</td><td><strong>₸14,990</strong></td></tr>
+    </table>
+  </section>
+
+  <section id="contact">
+    <h3>Contact Us</h3>
+    <p>📧 Email: <a href="mailto:tulkiflow.kz@gmail.com">tulkiflow.kz@gmail.com</a></p>
+    <p>📞 Phone: +7 700 177 7154</p>
+    <p>Instagram | Telegram</p>
+  </section>
+
+  <footer>
+    <a href="#about">About</a> |
+    <a href="#features">Features</a> |
+    <a href="#pricing">Pricing</a> |
+    <a href="#contact">Contact</a>
+    <p>© 2025 TulkiFlow. All rights reserved. Made in Kazakhstan.</p>
+  </footer>
+
+  <div id="demoModal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); justify-content:center; align-items:center;">
+    <div style="background:#fff; padding:30px; border-radius:20px; max-width:320px; width:90%; text-align:center; animation:fadeUp 0.5s ease;">
+      <h3 style="color:#6a1b9a;">Free Consultation</h3>
+      <p style="color:#555;">Enter your details — we’ll contact you soon.</p>
+      <input type="text" placeholder="Full Name" style="width:100%; padding:10px; margin:10px 0; border-radius:10px; border:1px solid #ddd;" />
+      <input type="email" placeholder="Email" style="width:100%; padding:10px; margin:10px 0; border-radius:10px; border:1px solid #ddd;" />
+      <input type="tel" placeholder="Phone Number" style="width:100%; padding:10px; margin:10px 0; border-radius:10px; border:1px solid #ddd;" />
+      <button onclick="closeModal()" style="background:#6a1b9a; color:#fff; border:none; padding:10px 20px; border-radius:10px; margin-top:10px; cursor:pointer;">Submit</button>
+    </div>
+  </div>
+
+</body>
+</html>
